@@ -13,14 +13,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                bat 'docker build -t selenium-jenkins-test .'
+                bat '"C:\\Users\\arind\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t selenium-jenkins-test .'
             }
         }
 
         stage('Run Selenium Test') {
             steps {
                 echo 'Running Selenium test inside Docker...'
-                bat 'docker run --rm selenium-jenkins-test'
+                bat '"C:\\Users\\arind\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" run --rm selenium-jenkins-test'
             }
         }
     }
